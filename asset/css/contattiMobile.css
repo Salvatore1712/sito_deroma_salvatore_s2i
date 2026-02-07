@@ -125,7 +125,7 @@
     #form-section {
         display: flex;
         justify-content: center;
-        margin: 10vh auto;
+        margin: 8vh auto;
         width: 100%;
     }
     #form-section form fieldset{
@@ -183,6 +183,7 @@
     }
 
     #button-form {
+        color: #000;
         border: none;
         border-radius: 8px;
         width: 50%;
