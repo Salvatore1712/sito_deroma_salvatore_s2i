@@ -125,7 +125,7 @@
     #form-section {
         display: flex;
         justify-content: center;
-        margin: 8vh auto;
+        margin: 5vh auto;
         width: 100%;
     }
     #form-section form fieldset{
