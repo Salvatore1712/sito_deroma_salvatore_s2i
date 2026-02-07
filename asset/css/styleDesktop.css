@@ -161,7 +161,28 @@
     }
 
 
-    /* CONTENUTO EXTRA */
+    /* ABOUT ME */
+    #about-me {
+        height: 60dvh;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+    }
+    #about-me h2{
+        line-height: 1.2em;
+        font-size: clamp(2.5rem, 3.2rem, 3.5rem);
+    }
+
+    #about-me h2:nth-child(2){
+        color: var(--acidGreen);
+    }
+    .about-text {
+        padding-top: 2rem;
+        width: 40%;
+        letter-spacing: 0.5;
+        font-size: clamp(0.8rem, 1.2rem, 1.5rem);
+    }
 
     /* FOOTER */
 }
