@@ -24,18 +24,16 @@
     }
 
     #grid-container {
-        margin-top: 2em;
-        max-width: 1440px;
-        display: grid;
+        margin: 2em auto;
+        display: flex;
+        flex-direction: column;
         grid-template-rows: auto 1fr auto;
     }
     header {
         justify-content: space-between;
         align-items: center;
     }
-    .logo_deroma {
-        float: left;
-    }
+    
     #header {
         margin-bottom: 2em;
         padding: 0;
@@ -44,7 +42,7 @@
         margin: 100px auto;
         position: absolute;
         top: 0;
-        left: -40%;
+        left: -100dvw;
         clear: both;
         height: 100dvh;
         text-align: center;
@@ -125,16 +123,17 @@
 
     /* form */
     #form-section {
+        display: flex;
         margin: 10vh auto;
+        width: 100%;
     }
     #form-section form fieldset{
-        width: 100%;
         border: 2px solid var(--acidGreen);
         border-radius: 8px;
     }
     legend h3 {
         font-weight: 300;
-        font-size: 2em;
+        font-size: clamp(0.8em, 1.2em, 2em);
     }
     legend h3 .talk-text {
         color: var(--acidGreen);
