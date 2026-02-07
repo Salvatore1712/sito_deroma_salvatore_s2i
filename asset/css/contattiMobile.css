@@ -124,6 +124,7 @@
     /* form */
     #form-section {
         display: flex;
+        justify-content: center;
         margin: 10vh auto;
         width: 100%;
     }
