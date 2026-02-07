@@ -87,7 +87,7 @@
 
     /* CONTENUTO PRINCIPALE */
     .hero-content {
-        height: calc(100dvh - 120px);
+        height: calc(100dvh - 110px);
         font-weight: normal;
         padding-bottom: 2em;
     }
