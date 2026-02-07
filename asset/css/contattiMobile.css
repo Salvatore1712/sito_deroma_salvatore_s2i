@@ -70,18 +70,35 @@
         text-decoration: underline;
     }
     .menu-btn{
-        width: 32px;
-        height: 5px;
+        width: 30px;
+        height: 3px;
         position: relative;
         float: right;
-        background-color: #35FF69;
-
     }
     .menu-icon {
-        z-index: 10;
-        width: 100%;
+        position: relative;
         display: block;
-        background-color: #35FF69;
+        width: 100%;
+        height: 100%;
+        background-color: var(--acidGreen);
+        transition: background-color 0.25s ease;
+    }
+    .menu-icon::before,
+    .menu-icon::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--acidGreen);
+        transition: transform 0.25s ease, top 0.25s ease;
+    }
+    .menu-icon::before {
+        position: absolute;
+        top: -8px;
+    }
+    .menu-icon::after {
+        top: 8px;
     }
     #menu-hamb:checked ~ .menu-nav {
         z-index: 1;
@@ -91,7 +108,93 @@
         height: 100dvh;
         transition: 0.5s ease-out;
     }
+    #menu-hamb:checked + .menu-btn .menu-icon {
+        background-color: transparent;
+    }
+    #menu-hamb:checked + .menu-btn .menu-icon::before {
+        top: 0;
+        transform: rotate(45deg);
+    }
+    #menu-hamb:checked + .menu-btn .menu-icon::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
     #menu-hamb {
         display: none;
+    }
+
+    /* form */
+    #form-section {
+        margin: 10vh auto;
+    }
+    #form-section form fieldset{
+        width: 100%;
+        border: 2px solid var(--acidGreen);
+        border-radius: 8px;
+    }
+    legend h3 {
+        font-weight: 300;
+        font-size: 2em;
+    }
+    legend h3 .talk-text {
+        color: var(--acidGreen);
+        font-weight: 600;
+    }
+    .fieldset-box {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        line-height: 10px;
+        font-size: var(--fontSize);
+        padding: 30px;
+        
+    }
+    .fieldset-box label{
+        line-height: 0;
+        margin: 0;
+    }
+    .fieldset-box input {
+        color: var(--white);
+        margin-bottom: 20px;
+        border-radius: 8px;
+        height: 30px;
+        background-color: transparent;
+        border: 1px solid var(--acidGreen);
+        box-shadow: 0px 0px 15px var(--acidGreen);
+        padding: 5px;
+        font-size: 1.1em;
+        font-weight: 100;
+    }
+    .fieldset-box input:focus,
+    .fieldset-box textarea {
+        border: 1px solid white;
+        color: #fff;
+        font-size: 1.1em;
+        font-weight: 100;
+    }
+    .fieldset-box textarea {
+        height: 100px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        padding: 5px;
+        background-color: transparent;
+        border: 1px solid var(--acidGreen);
+        box-shadow: 0px 0px 15px var(--acidGreen);
+    }
+
+    #button-form {
+        border: none;
+        border-radius: 8px;
+        width: 50%;
+        margin: 0 auto;
+        height: 30px;
+        font-weight: bold;
+        cursor: pointer;
+        background-color: var(--acidGreen);
+        
+    }
+    #button-form:hover {
+        box-shadow: 0 0 20px var(--white);
+        transition: .2s ease-out;
     }
 }
