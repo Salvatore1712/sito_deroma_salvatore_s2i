@@ -27,7 +27,7 @@ ul, li, a {
         overflow: hidden;
     }
     .grid-item {
-        border: var(--debugBorder);
+        /* border: var(--debugBorder); */
     }
     /*    HEADER   */
     .header {
@@ -50,6 +50,9 @@ ul, li, a {
         height: 4px;
         background-color: black;
         z-index: 2;
+        display: block;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
     }
     .menu-label::before {
         content: "";
@@ -59,6 +62,7 @@ ul, li, a {
         background-color: black;
         top: -7px;
         z-index: 2;
+        transition: top 0.3s ease, transform 0.3s ease;
     }
     .menu-label::after {
         content: "";
@@ -67,6 +71,18 @@ ul, li, a {
         height: 100%;
         background-color: black;
         top: 7px;
+        transition: top 0.3s ease, transform 0.3s ease;
+    }
+    #menu-btn:checked + .menu-label {
+        background-color: transparent;
+    }
+    #menu-btn:checked + .menu-label::before {
+        top: 0;
+        transform: rotate(45deg);
+    }
+    #menu-btn:checked + .menu-label::after {
+        top: 0;
+        transform: rotate(-45deg);
     }
     #menu-btn:checked ~ .nav-menu {
         opacity: 1;
