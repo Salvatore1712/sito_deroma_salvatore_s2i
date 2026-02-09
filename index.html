@@ -3,89 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salvatore De Roma</title>
-    <link rel="stylesheet" href="/asset/css/styleDesktop.css">
+    <title>Slavatore De Roma</title>
+    <link rel="stylesheet" href="/asset/css/mobile.css">
     <link rel="shortcut icon" href="/asset/img/favicon_io/favicon-32x32.png" type="image/png">
+
 </head>
 <body>
+    <!-- contenitore grid layoyt -->
+    <div class="grid-container">
+        <div class="grid-item">
 
-    <!-- contenitore grid layout -->
-    <div id="grid-container">
-
-        <div class="row-layout sticky">
-            <header id="header">
-
-                <!-- logo -->
-                <a href="index.html">
-                    <img src="/asset/img/Desktop - HOME 1440/logo_deroma_salvatore 1.svg" alt="logo salvatore de roma web developer">
+            <!-- HEADER logo, check, menu -->
+            <header class="header">
+                <a href="index.html"> <!-- LOGO -->
+                    <img src="/asset/img/logo_deroma_salvatore_mobile.svg" alt="salvatore de roma web developer">
                 </a>
 
-                <input type="checkbox" name="menu-btn" id="menu-btn">
-                <label for="menu-btn">
-                    <span id="btn-icon"></span>
+                <!-- BUTTON MOBILE -->
+                <input type="checkbox" name="menu-btn" id="menu-btn"> 
+                <label for="menu-btn" class="menu-label">
+                    <span class="menu-icon"></span>
                 </label>
 
-                <!-- menu navigazione -->
+                <!-- MENU -->
                 <nav class="nav-menu">
-                    <ul>
+                    <ul class="list-menu">
                         <li><a href="index.html">home</a></li>
-                        <li><a href="about_me.html">about me</a></li>
+                        <li><a href="aboutme.html">about me</a></li>
                         <li><a href="project.html">project</a></li>
-                        <li><a href="contact.html" class="green-text">contact me</a></li>
+                        <li><a href="contact-me green">contact me</a></li>
                     </ul>
                 </nav>
             </header>
-
+        </div>
+        <div class="grid-item flex">
+            hero
         </div>
 
-        <!-- contenuto principale -->
-        <div class="row-layout hero-content">
-            <main id="hero-section">
-                <p class="text-show delay1">MODERN</p>
-                <p class="text-show delay2" >FAST</p>
-                <p class="text-show delay3">CLEAR</p>
-                <p class="text-show delay4">DESIGN</p>
-                <br>
-                <!-- slogan, testo -->
-                <h3>Salvatore De Roma</h3>
-                <h1>WEB DEVELOPER</h1>
-                <h4>Turning <span class="concept">concepts</span> into interactive websites</h4>
-            </main>
+        <div class="grid-item main">
+            main
         </div>
-
-        <!-- contenuto about me -->
-        <div class="row-layout">
-            <div id="about-me">
-                <h2>Thoughtful design.</h2>
-                <h2>Clean code.</h2>
-                <h2>Better experiences.</h2>
-                <br>
-                <p class="about-text">
-                    I am a Web Developer with a passion for building effective and well-structured digital solutions. 
-                    I’m specialized in developing websites and applications focused on performance, usability, and scalability.
-                    <br>
-                    I believe in clean code, essential design, and a practical approach: every project should solve a real problem.
-                </p>
-            </div>
+        <div class="grid-item footer">
+            footer
         </div>
-
-        <!-- project -->
-        <div class="row-layout">
-            <footer>    
-               
-            </footer>
-        </div>
-        <div class="row-layout">
-            <footer>    
-               
-            </footer>
-        </div>
-
-
-
-
-
-
     </div>
     
 </body>
