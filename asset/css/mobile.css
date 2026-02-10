@@ -22,12 +22,13 @@ ul, li, a {
         margin: 0 auto;
         display: grid;
         grid-template-columns: 1fr;
-        border: var(--debugBorder);
-        grid-template-rows: auto auto minmax(auto, 65vh) auto auto;
-        overflow: hidden;
+        /* border: var(--debugBorder); */
+        grid-template-rows: auto auto minmax(auto, 100%) auto auto;
+        height: auto;
     }
     .grid-item {
-        border: var(--debugBorder);
+        /* border: var(--debugBorder); */
+        position: relative;
     }
     /*    HEADER   */
     .header {
@@ -36,9 +37,9 @@ ul, li, a {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 100%;
         top: 0;
         z-index: 100;
+        background-color: rgba(255, 255, 255, 75%);
     }
 
     /* INPUT CHECKBOX MENU RESPONSIVE */
@@ -168,15 +169,15 @@ ul, li, a {
         background-color: lightgrey;
     }
 
+
     /*  HERO SECTION.  */
     .hero-container {
-        height: 100%;
-        border: var(--debugBorder);
+        height: 50vh;
+        /* border: var(--debugBorder); */
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-end;
-        line-height: 1.8em;
     }
     .hero-container h4, h1, p{
         padding: 0;
@@ -192,5 +193,31 @@ ul, li, a {
 
     .concept {
         color: var(--acidGreen);
+    }
+
+
+
+    /*    ABOUT ME     */
+    .about-me {
+        padding-top: 5em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-me h2 {
+
+    }
+    .about-me .text-about-me{
+        width: 75%;
+        text-align: left;
+        padding: 3em 0 3em 0;
+        font-size: clamp(0.8em, 1.1em, 1.5em);
+        letter-spacing: 0.1em;
+    }
+    .green {
+        padding: 0;
+        font-size: clamp(1.5em, 1.8em, 1.9em);
+        color: var(--acidGreen);
+        line-height: 100%;
     }
 }
