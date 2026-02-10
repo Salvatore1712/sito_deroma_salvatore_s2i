@@ -23,11 +23,11 @@ ul, li, a {
         display: grid;
         grid-template-columns: 1fr;
         border: var(--debugBorder);
-        grid-template-rows: auto minmax(500px, 90vh) auto auto;
+        grid-template-rows: auto auto minmax(auto, 50vh) auto auto;
         overflow: hidden;
     }
     .grid-item {
-        /* border: var(--debugBorder); */
+        border: var(--debugBorder);
     }
     /*    HEADER   */
     .header {
@@ -38,6 +38,7 @@ ul, li, a {
         align-items: center;
         width: 100%;
         top: 0;
+        z-index: 100;
     }
 
     /* INPUT CHECKBOX MENU RESPONSIVE */
@@ -49,7 +50,7 @@ ul, li, a {
         width: 30px;
         height: 4px;
         background-color: black;
-        z-index: 2;
+        z-index: 200;
         display: block;
         cursor: pointer;
         transition: background-color 0.3s ease;
@@ -86,12 +87,39 @@ ul, li, a {
     }
     #menu-btn:checked ~ .nav-menu {
         opacity: 1;
-        transition: 0.8s ease-in-out;
+        transition: 0.7s ease-in-out;
     }
 
 
+    /*    SHOW TEXT MODERN FAST CODE */
+    .show-animation {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 5em;
+        text-align: center;
+        font-size: 1.3em;
 
-
+    }
+    .show-animation p{
+        animation: show-right 0.2s ease-in-out forwards;
+        animation-delay: 0.5s;
+        opacity: 0;
+    }
+    .show-animation p:nth-child(2){
+        animation: show-right 0.2s ease-in-out forwards;
+        animation-delay: 1s;
+        z-index: 0;
+    }
+    @keyframes show-right {
+        from {
+            opacity: 0;            
+        }
+        to {
+            opacity: 1;
+        }
+        
+    }
 
 
     /*   MENU NAV */
@@ -122,5 +150,31 @@ ul, li, a {
     .list-menu li:hover {
         color: black;
         background-color: lightgrey;
+    }
+
+    /*  HERO SECTION.  */
+    .hero-container {
+        height: 100%;
+        border: var(--debugBorder);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        line-height: 1.8em;
+    }
+    .hero-container h4, h1, p{
+        padding: 0;
+        margin: 0;
+    }
+    .hero-container h4 {
+        font-weight: 300;
+        font-size: clamp(0.8em, 1.1em, 1.8em);
+    }
+    .hero-container h1 {
+        font-size: clamp(1.5em, 2.5em, 2.5em);
+    }
+
+    .concept {
+        color: var(--acidGreen);
     }
 }
