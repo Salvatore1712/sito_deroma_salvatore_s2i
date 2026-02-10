@@ -37,7 +37,7 @@ ul, li, a {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        top: 0;
+        top: 5px;
         z-index: 100;
         background-color: rgba(255, 255, 255, 75%);
     }
