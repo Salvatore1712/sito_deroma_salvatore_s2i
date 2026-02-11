@@ -90,6 +90,8 @@ ul, li, a {
     }
     #menu-btn:checked ~ .nav-menu {
         opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
         transition: 0.7s ease-in-out;
     }
 
@@ -149,10 +151,13 @@ ul, li, a {
         width: 100%;
         height: 100vh;
         background-color: white;
-        position: absolute;
+        position: fixed;
         opacity: 0;
         top: 0;
         left: 0;
+        z-index: 150;
+        visibility: hidden;
+        pointer-events: none;
         margin: 0 auto;
         transition: 0.8s ease-in-out;
         text-align: center;
@@ -259,15 +264,14 @@ ul, li, a {
         display: flex;
         justify-content: flex-end;
         align-items: flex-end;
-        width: 20em;
-        height: 20em;
+        width: 15em;
+        height: 15em;
         background-color: hsl(0, 4%, 78%);
-        border-radius: 8px 40% 8px 8px;
+        border-radius: 8px 8px 8px 8px;
         padding-right: 0.2em;
-        border: 1px solid hsl(0, 2%, 68%);
+        border: var(--debugBorder)
     }
     .card p {
-        color: black;
         font-size: 4em;
         font-weight: 600;
     }
@@ -275,5 +279,44 @@ ul, li, a {
         cursor: pointer;
         background-color: black;
         color: var(--acidGreen);
+        transition: 0.5s ease-in;
+    }
+
+    /*   FOOTER   */
+    #footer {
+        display: flex;
+        background-color: black;
+        flex-direction: column;
+        padding: 0.8em;
+        margin-top: 5em;
+        width: 100vw;
+        margin-left: calc(50% - 50vw);
+        color: white;
+        font-size: 0.8em;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+    .info-1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 12px;
+
+    }
+    .info-1 img {
+        width: 33%;
+        height: 50%;
+    }
+    .info-1 h5 {
+        margin: 0;
+        padding: 0;
+    }
+    .info-2, .info-2 a {
+        text-align: center;
+        text-decoration: none;
+        color: white;
     }
 }
