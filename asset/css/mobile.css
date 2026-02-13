@@ -233,7 +233,7 @@ ul, li, a {
 
     /*   PROJECT SECTION */
     .project-area {
-        border: var(--debugBorder);
+        /* border: var(--debugBorder); */
         padding-top: 7em;
         display: flex;
         flex-direction: column;
@@ -255,25 +255,25 @@ ul, li, a {
     .box-card {
         padding-top: 2em;
         display: flex;
-        flex-direction: column;
+        flex-direction: flex;
         justify-content: space-evenly;
         align-items: center;
-        border: var(--debugBorder);
+        gap: 8px;
+        /* border: var(--debugBorder); */
     }
     .card {
         display: flex;
         justify-content: flex-end;
         align-items: flex-end;
-        width: 15em;
-        height: 15em;
-        background-color: hsl(0, 4%, 78%);
+        width: auto;
+        /* background-color: hsl(0, 4%, 78%); */
         border-radius: 8px 8px 8px 8px;
         padding-right: 0.2em;
-        border: var(--debugBorder)
+        /* border: var(--debugBorder) */
     }
     .card p {
-        font-size: 4em;
-        font-weight: 600;
+        font-size: 1.2em;
+        font-weight: 500;
     }
     .card:hover {
         cursor: pointer;
@@ -288,15 +288,15 @@ ul, li, a {
         background-color: black;
         flex-direction: column;
         padding: 0.8em;
-        margin-top: 5em;
-        width: 100vw;
-        margin-left: calc(50% - 50vw);
+        margin: 5em auto 0 auto;
+        width: auto;
         color: white;
         font-size: 0.8em;
         justify-content: center;
         align-items: center;
         text-align: center;
         gap: 10px;
+        border-radius: 5px 5px 0 0;
     }
     .info-1 {
         display: flex;
